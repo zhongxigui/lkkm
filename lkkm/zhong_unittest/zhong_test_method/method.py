@@ -119,14 +119,15 @@ class titleMethod(object):
 
     '''封装获取toast弹框'''
     def find_toast(self,message):
-        logging.info("查找toast值---'%s'" %(message))
+        logging.info("查找toast值---'%s'" %message)
         try:
-            toast_Code = ('xpath','.//*[contains(@text,"%s")]'.format(message))
+            toast_Code = ("xpath",'.//*[contains(@text,"%s")]'.format(message))
             WebDriverWait(self.driver, 10,0.01).until(EC.presence_of_element_located(toast_Code))
-
+            return True
             self.logger.info('获取到toast:{}'.format(message))
         except:
-            self.logger.error('未获取到toast:{}'.format(message))
+            self.logger.info('未获取到toast:{}'.format(message))
+            return False
 
 
     '''等待定位元素'''
@@ -141,13 +142,28 @@ class titleMethod(object):
             self.logger.info(u'>>>未检测到{},页面跳转成功'.format(resourceid))
 
 #     '''重复点击按钮id'''
-# def repeat(self,id,m):
-#     a = 0
-#     while m > a :
-#         c=self.driver.find_element_by_id(id)
-#         c.click
-#         a = a +1
-#         time.sleep(2)
+#   def repeat(self,id,m):
+#       a = 0
+#       while m > a :
+#           c=self.driver.find_element_by_id(id)
+#           c.click
+#           a = a +1
+#           time.sleep(2)
+
+    '''获取当前屏幕的截图'''
+    def take_screenShot(self, name):
+        day = time.strftime("%Y-%m-%d", time.localtime(time.time()))
+        fq = "..\zhong-screenShots\\" + day
+        tm = time.strftime("%Y-%m-%d_%H_%M_%S", time.localtime(time.time()))
+        type = '.png'
+        if os.path.exists(fq):
+            filename = fq+"\\"+tm+"_"+name+type
+        else:
+            os.makedirs(fq)
+            filename = fq+"\\"+tm+"_"+name+type
+        self.driver.get_screenshot_as_file(filename)
+
+
 
 
 

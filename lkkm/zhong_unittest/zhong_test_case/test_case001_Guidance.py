@@ -38,6 +38,13 @@ class  Test_slide(unittest.TestCase,object):
             time.sleep(30)
             self.logger.info('手机系统不兼容，无法获取到授权允许，默认等待三十秒！')
         try:
+            WebDriverWait(self, 10).until(lambda driver: self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"蓝牙\"]'))
+            startMethod.action_Id(self, 'android:id/button1', 'click')
+            self.logger.info('蓝牙已经开启')
+        except:
+            self.logger.info('蓝牙已经开启')
+
+        try:
             startMethod.action_Id(self, bottom['我的id'], 'obtain')
             self.assertEqual(1, 1, msg='第一次引导页成功')
             self.logger.info('第一次引导页成功')
@@ -82,7 +89,8 @@ class  Test_slide(unittest.TestCase,object):
         startMethod.action_Id(self, 'com.lekelian.lkkm:id/view_suozaiquyu', 'click')  #所在区域
         startMethod.scrollAction(self,'com.lekelian.lkkm:id/loopview1',2,6)
         self.logger.info('滑动成功')
-        self.driver.find_element_by_xpath('//android.widget.TextView[@test=\"确定\"]').click()
+        time.sleep(5)
+        startMethod.action_Id(self,'com.lekelian.lkkm:id/tv_sheng_queding','click')
         self.logger.info('第一次点击成功')
         time.sleep(5)
         self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"确定\"]').click()

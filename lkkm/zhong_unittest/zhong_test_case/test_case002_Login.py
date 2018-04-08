@@ -30,32 +30,36 @@ class Test_login(unittest.TestCase,object):
     def test02(self):
         '''不输入点击【获取验证码】'''
         startMethod.action_Id(self,bottom['请选择小区id'], 'click')
-        startMethod.action_Id(self,login['获取验证码id'],'click')
         titleMethod.find_toast(self,'请先登录')
+        startMethod.action_Id(self, login['获取验证码id'], 'click')
+        titleMethod.find_toast(self,' 电话号码不能为空')
 
 
-    # def test0(self):
-    #     '''输入正确手机号码，正确密码'''
-    #     self.logger.info('*************************************************************')
-    #     startMethod.action_Id(self,bottom['请选择小区id'], 'click')
-    #     startMethod.action_Id(self,login['账号id'],titleMethod.duQu_Exlce(self,'登录',1,2))#输入正确手机号码
-    #     startMethod.action_Id(self,login['获取验证码id'], 'click')  # 点击获取验证码
-    #     startMethod.action_Id(self,login['输入验证码id'],titleMethod.duQu_Exlce(self,'登录',1,3))#输入验证码
-    #     startMethod.action_Id(self,login['登录id'],'click')#点击登录
-    #     startMethod.action_Id(self,login['跳过id'], 'click')
-    #     time.sleep(3)
-    #     try:
-    #         WebDriverWait(self, 2).until(lambda driver: self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"请选择小区\"]'))
-    #         self.assertEqual(1, 1, msg='输入正确手机号码，正确验证码，可以登陆，符合预期')
-    #     except:
-    #         self.assertEqual(1, 2, msg='输入正确手机号码，正确密码，不可登录，不符合预期')
-    #     startMethod.backLogin(self)
-    #
+
+    def test03(self):
+        '''输入正确手机号码，正确密码'''
+        self.logger.info('*************************************************************')
+        startMethod.action_Id(self,bottom['请选择小区id'], 'click')
+        startMethod.action_Id(self,login['账号id'],titleMethod.duQu_Exlce(self,'登录',1,2))#输入正确手机号码
+        startMethod.action_Id(self,login['获取验证码id'], 'click')  # 点击获取验证码
+        startMethod.action_Id(self,login['输入验证码id'],titleMethod.duQu_Exlce(self,'登录',1,3))#输入验证码
+        startMethod.action_Id(self,login['登录id'],'click')#点击登录
+        startMethod.action_Id(self,login['跳过id'], 'click')
+        time.sleep(3)
+        titleMethod.take_screenShot(self,'jietu')
+        try:
+            WebDriverWait(self, 2).until(lambda driver: self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"请选择小区\"]'))
+            self.assertEqual(1, 1, msg='输入正确手机号码，正确验证码，可以登陆，符合预期')
+        except:
+            self.assertEqual(1, 2, msg='输入正确手机号码，正确密码，不可登录，不符合预期')
+        startMethod.backLogin(self)
+
 
 def suite():
     suiteTest=unittest.TestSuite()
     suiteTest.addTest(Test_login('test01'))
     suiteTest.addTest(Test_login('test02'))
+    suiteTest.addTest(Test_login('test03'))
     return suiteTest
 
 if __name__=='__main__':
