@@ -8,11 +8,10 @@ https://testerhome.com/topics/7129    ##appium的 原生控件的xpath定位问题及常用方
 http://blog.csdn.net/hytfly/article/details/49364241		##aapt用法
 https://developer.android.com  ##uiautomator 官网api
 http://so.csdn.net/so/search/s.do?q=UiAutomator+api&t=blog&o=&s=&l=null   	##uiautomator相关文章
-https://blog.csdn.net/qq_14908027/article/details/78886386		##Appium-控制多台安卓设备执行的入门级实现
-http://ask.testfan.cn/question/88
-https://blog.csdn.net/qq_14908027/article/details/78886386
-https://blog.csdn.net/BestSmilesHi/article/details/77506506
-https://blog.csdn.net/a542551042/article/details/48269371
+http://ask.testfan.cn/question/88  ##Appium-控制多台安卓设备执行的入门级实现
+https://blog.csdn.net/qq_14908027/article/details/78886386  ##Appium-控制多台安卓设备执行的入门级实现
+https://blog.csdn.net/BestSmilesHi/article/details/77506506  ##Appium-控制多台安卓设备执行的入门级实现
+https://blog.csdn.net/a542551042/article/details/48269371   ##Appium-控制多台安卓设备执行的入门级实现
 
 
 
@@ -38,7 +37,9 @@ http://www.cnblogs.com/aland-1415/p/6949964.html		##monkey命令详解
 https://www.liaoxuefeng.com/		##廖雪峰的官方网站
 http://www.51zxw.net/		##我要自学网
 http://www.cnblogs.com/fnng/		##虫师
-https://blog.csdn.net/qfatao/article/details/18736421  PyCharm常用快捷键
+https://blog.csdn.net/qfatao/article/details/18736421  ##PyCharm常用快捷键
+http://www.cnblogs.com/alex3714/articles/5950372.html  ##Day11 - python mysql and ORM
+http://www.cnblogs.com/peida/tag/%E6%AF%8F%E6%97%A5%E4%B8%80linux%E5%91%BD%E4%BB%A4/   ##linux  
 
 
 
