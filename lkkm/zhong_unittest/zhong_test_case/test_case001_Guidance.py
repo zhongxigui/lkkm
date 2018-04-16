@@ -27,6 +27,13 @@ class  Test_slide(unittest.TestCase,object):
         time.sleep(2)
         startMethod.action_Id(self, flash['跳过广告id'], 'click')
         try:
+            WebDriverWait(self, 10).until(lambda driver: self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"蓝牙\"]'))
+            startMethod.action_Id(self, 'android:id/button1', 'click')
+            self.logger.info('蓝牙已经开启')
+        except:
+            self.logger.info('蓝牙已经开启')
+
+        try:
             WebDriverWait(self, 10).until(lambda driver: self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"“乐客开门”需要使用存储权限，您是否允许？\"]'))
 
             startMethod.action_Id(self, 'com.android.packageinstaller:id/permission_allow_button', 'click')
@@ -37,12 +44,6 @@ class  Test_slide(unittest.TestCase,object):
         except:
             time.sleep(30)
             self.logger.info('手机系统不兼容，无法获取到授权允许，默认等待三十秒！')
-        try:
-            WebDriverWait(self, 10).until(lambda driver: self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"蓝牙\"]'))
-            startMethod.action_Id(self, 'android:id/button1', 'click')
-            self.logger.info('蓝牙已经开启')
-        except:
-            self.logger.info('蓝牙已经开启')
 
         try:
             startMethod.action_Id(self, bottom['我的id'], 'obtain')
@@ -66,8 +67,10 @@ class  Test_slide(unittest.TestCase,object):
 
         '''登录未选择小区'''
     def test02(self):
-        time.sleep(3)
+        time.sleep(5)
         startMethod.loginlkkm(self,17603031220,1234)
+        startMethod.action_Id(self,flash['首次引导使用'],'click')
+        #self.driver.tap([(325,356),(493,524)], 100)
         startMethod.action_Id(self,bottom['客服id'],'click')
         WebDriverWait(self, 10).until(lambda driver: self.driver.find_element_by_xpath(
             '//android.widget.TextView[@text=\"选择小区\"]'))
@@ -101,6 +104,10 @@ class  Test_slide(unittest.TestCase,object):
         startMethod.action_Id(self, 'com.lekelian.lkkm:id/tv_jie_queding', 'click')
         startMethod.action_Id(self,choosehous['返回id'],'click')
         self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"金钱包\"]').click()
+        startMethod.action_Id(self,flash['首次引导使用'],'click')
+        time.sleep(5)
+        startMethod.action_Id(self, flash['首次引导使用'], 'click')
+
         try:
             self.assertEqual(1, 1, msg='选择小区返回主页成功')
         except:

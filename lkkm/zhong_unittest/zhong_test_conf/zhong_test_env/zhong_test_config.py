@@ -95,6 +95,7 @@ flash = {}
 flash['页面返回id']='com.lekelian.lkkm:id/img_title_left'
 flash['跳过广告id']='com.lekelian.lkkm:id/img_welcome_jump'
 flash['确定xpath']='//android.widget.TextView[@test=\"确定\"]'
+flash['首次引导使用']='com.lekelian.lkkm:id/img_yd'
 
 '''我的'''
 global my

@@ -36,7 +36,7 @@ class startMethod(object):
 
     '''封装登录app方法'''
     def loginlkkm(self, a, b):
-        self.driver.find_element_by_id(bottom['请选择小区id']).click()
+        self.driver.find_element_by_id(bottom['登录按钮id']).click()
         self.driver.find_element_by_id(login['账号id']).set_text(a)
         self.logger.info('输入账号为{}'.format(a))
         self.driver.find_element_by_id(login['获取验证码id']).click()
@@ -45,8 +45,8 @@ class startMethod(object):
         self.logger.info('输入验证码为{}'.format(b))
         self.driver.find_element_by_id(login['登录id']).click()
         self.logger.info('点击登录按钮')
-        self.driver.find_element_by_id(login['跳过id']).click()
-        self.logger.info('点击跳过按钮')
+        #self.driver.find_element_by_id(login['跳过id']).click()
+        #self.logger.info('点击跳过按钮')
         try:
             WebDriverWait(self, 20).until(
                 lambda driver: startMethod.action_Id(self, bottom['我的id'], 'obtain'))  # 验证页面是否正常跳转成功
