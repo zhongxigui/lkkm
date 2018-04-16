@@ -1,0 +1,62 @@
+UI
+https://www.jianshu.com/p/eea0b0e432da		##python_常用断言assert
+https://www.cnblogs.com/meitian/p/6103391.html		##Appium学习路—Android定位元素与操作
+https://blog.csdn.net/u011541946/article/category/6927364		##自动化技能的学习和笔记
+https://blog.csdn.net/u010375364/article/details/52344120		##ADB常用用法大全
+https://www.cnblogs.com/yufeihlf/p/5707929.html#test1  		##unittest单元测试框架总结
+https://testerhome.com/topics/7129    ##appium的 原生控件的xpath定位问题及常用方法
+http://blog.csdn.net/hytfly/article/details/49364241		##aapt用法
+https://developer.android.com  ##uiautomator 官网api
+http://so.csdn.net/so/search/s.do?q=UiAutomator+api&t=blog&o=&s=&l=null   	##uiautomator相关文章
+http://ask.testfan.cn/question/88  ##Appium-控制多台安卓设备执行的入门级实现
+https://blog.csdn.net/qq_14908027/article/details/78886386  ##Appium-控制多台安卓设备执行的入门级实现
+https://blog.csdn.net/BestSmilesHi/article/details/77506506  ##Appium-控制多台安卓设备执行的入门级实现
+https://blog.csdn.net/a542551042/article/details/48269371   ##Appium-控制多台安卓设备执行的入门级实现
+
+
+
+
+
+*******************************************************************************************************************
+接口
+http://www.cnblogs.com/yoyoketang/tag/python%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96/	 ##python接口自动化
+http://www.cnblogs.com/puresoul/p/7488481.html		##python接口自动化测试(一)
+http://www.51testing.com/zhuanti/postman.htm		##Postman从入门到上手
+
+
+
+
+
+
+*******************************************************************************************************************
+学习
+http://www.runoob.com/  	##菜鸟教程
+http://www.pythontab.com/		##Python中文开发者社区门户
+http://www.ltesting.net/    	##领测软件测试网
+http://www.cnblogs.com/aland-1415/p/6949964.html		##monkey命令详解 
+https://www.liaoxuefeng.com/		##廖雪峰的官方网站
+http://www.51zxw.net/		##我要自学网
+http://www.cnblogs.com/fnng/		##虫师
+https://blog.csdn.net/qfatao/article/details/18736421  ##PyCharm常用快捷键
+http://www.cnblogs.com/alex3714/articles/5950372.html  ##Day11 - python mysql and ORM
+http://www.cnblogs.com/peida/tag/%E6%AF%8F%E6%97%A5%E4%B8%80linux%E5%91%BD%E4%BB%A4/   ##linux  
+https://blog.csdn.net/u011541946/article/details/71617363  ##linux
+
+
+
+
+*******************************************************************************************************************
+其他
+http://www.gpsspg.com/maps.htm		##在线地图经度纬度查询
+http://help.apple.com/watch/#/apd8b5deac7b		##快速了解 Apple Watch 的功能 - Apple Watch 使用手册
+http://www.pmcaff.com/feed		##PMCAFF社区
+https://mp.weixin.qq.com/s/PJu9a2b_fLc74IIyWTPr4Q		##
+https://mp.weixin.qq.com/s/dgS_nYfA8tdBh9M5zJ5daQ		##
+https://mp.weixin.qq.com/s/pHzYSB0ysfn252vQneykJA		##
+https://mp.weixin.qq.com/s/9C8TJA6hb6YAIt6Ot1z2aA		##
+http://www.akuziti.com/yw/ ##英文艺术字转换器
+
+
+
+
+
